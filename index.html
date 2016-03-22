@@ -117,7 +117,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                2
+                3
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -149,6 +149,170 @@
 
             
             <section id="main">
+    <article id="post-ll" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/03/22/ll/">Java review note</a>
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/03/22/ll/">
+            <time datetime="2016-03-22T12:19:30.000Z" itemprop="datePublished">2016-03-22</time>
+        </a>
+    </div>
+
+
+                    
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
+                    
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/java/">java</a>
+    </div>
+
+                </div>
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p><img src="http://ww3.sinaimg.cn/mw690/7505a2a9jw1f25wkmpanjj21kw11x1kx.jpg" alt=""></p>
+<hr>
+<p><em>Abstraction:</em> </p>
+<ul>
+<li>Big programs are built out of small methods.</li>
+<li>Methods can be individually developed,tested and reused.</li>
+<li>User of method does not need to know how it works.</li>
+</ul>
+<hr>
+<p><em>Good programming style</em></p>
+<ul>
+<li><p>Rule 1: Use good(meaningful) names</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String a1;</span><br><span class="line"><span class="keyword">int</span> a2;</span><br><span class="line"><span class="keyword">double</span> b;         <span class="comment">// BAD!!</span></span><br><span class="line">String firstName; <span class="comment">// GOOD String lastName; // GOOD int temperature; // GOOD</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Rule 2: Use indentation</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] arguments)</span> </span>&#123; <span class="keyword">int</span> x = <span class="number">5</span>;</span><br><span class="line">x = x * x;</span><br><span class="line"><span class="keyword">if</span> (x &gt; <span class="number">20</span>) &#123;</span><br><span class="line">System.out.println(x + “ is greater than <span class="number">20</span>.”); &#125;</span><br><span class="line"><span class="keyword">double</span> y = <span class="number">3.4</span>; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong><em>Ctrl-shift-F to auto-format the file</em></strong></p>
+<ul>
+<li><p>Rule 3:Use whitespaces<br>Put whitespaces in complex expressions:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// BAD!!</span></span><br><span class="line"><span class="keyword">double</span> cel=fahr*<span class="number">42.0</span>/(<span class="number">13.0</span>-<span class="number">7.0</span>);</span><br><span class="line"><span class="comment">// GOOD</span></span><br><span class="line"><span class="keyword">double</span> cel = fahr * <span class="number">42.0</span> / (<span class="number">13.0</span> - <span class="number">7.0</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Rule 4:Do not duplicate tests</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (basePay &lt; <span class="number">8.0</span>) &#123; ...</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (hours &gt; <span class="number">60</span>) &#123; ...</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (basePay &gt;= <span class="number">8.0</span> &amp;&amp; hours &lt;= <span class="number">60</span>)&#123; ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="—————–BAD—————–"><a href="#—————–BAD—————–" class="headerlink" title="—————–BAD—————–"></a>—————–BAD—————–</h2><p><em>Something about loop</em></p>
+<ul>
+<li><p><strong>break:</strong> terminates a for a while loop<br><img src="http://ww3.sinaimg.cn/large/7505a2a9jw1f25w7t6j2zj214q0n040r.jpg" alt="break"></p>
+</li>
+<li><p><strong>continue:</strong> skips the current iteration of a loop and preceeds directly to the next iteration.<br><img src="http://ww4.sinaimg.cn/large/7505a2a9jw1f25w9x74s0j21440gk40i.jpg" alt="continue"></p>
+</li>
+</ul>
+<hr>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2016/03/22/ll/" data-id="cim3e3ly00004ms0gy5c8ogpe" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/03/22/ll/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/03/22/ll/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-Learning notes" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -210,7 +374,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/03/22/Learning notes/" data-id="cim39d6dm0000h10gxc5fkw9g" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/03/22/Learning notes/" data-id="cim3e3lxr0000ms0g0dyxa3j0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -338,7 +502,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/03/21/hello-world/" data-id="cim39d6dq0001h10gnzbhmejg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/03/21/hello-world/" data-id="cim3e3lxv0001ms0g6nc3j3nn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -423,7 +587,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -432,7 +596,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -441,7 +605,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/static-method/">static method</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/static-method/">static method</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -450,7 +614,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/static-method/" style="font-size: 10px;">static method</a>
+            <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/static-method/" style="font-size: 10px;">static method</a>
         </div>
     </div>
 

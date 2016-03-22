@@ -3,27 +3,47 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Difference between static method and instance method | Maybe</title>
+    <title>Java review note | Maybe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="静态方法和实例方法的区别主要体现在两个方面：
-在外部调用静态方法时，可以使用”类名.方法名”的方式，也可以使用”对象名.方法名”的方式。而实例方法只有后面这种方式。也就是说，调用静态方法可以无需创建对象。
-静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。
-举个例子： 1. 调用静态方法示例:1234567 //--">
+    <meta name="description" content="Abstraction: 
+
+Big programs are built out of small methods.
+Methods can be individually developed,tested and reused.
+User of method does not need to know how it works.
+
+
+Good programming style
+
+Rule">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Difference between static method and instance method">
-<meta property="og:url" content="http://yoursite.com/2016/03/22/Learning notes/index.html">
+<meta property="og:title" content="Java review note">
+<meta property="og:url" content="http://yoursite.com/2016/03/22/ll/index.html">
 <meta property="og:site_name" content="Maybe">
-<meta property="og:description" content="静态方法和实例方法的区别主要体现在两个方面：
-在外部调用静态方法时，可以使用”类名.方法名”的方式，也可以使用”对象名.方法名”的方式。而实例方法只有后面这种方式。也就是说，调用静态方法可以无需创建对象。
-静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。
-举个例子： 1. 调用静态方法示例:1234567 //--">
-<meta property="og:updated_time" content="2016-03-22T09:08:27.000Z">
+<meta property="og:description" content="Abstraction: 
+
+Big programs are built out of small methods.
+Methods can be individually developed,tested and reused.
+User of method does not need to know how it works.
+
+
+Good programming style
+
+Rule">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/7505a2a9jw1f25wkmpanjj21kw11x1kx.jpg">
+<meta property="og:updated_time" content="2016-03-22T12:20:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Difference between static method and instance method">
-<meta name="twitter:description" content="静态方法和实例方法的区别主要体现在两个方面：
-在外部调用静态方法时，可以使用”类名.方法名”的方式，也可以使用”对象名.方法名”的方式。而实例方法只有后面这种方式。也就是说，调用静态方法可以无需创建对象。
-静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。
-举个例子： 1. 调用静态方法示例:1234567 //--">
+<meta name="twitter:title" content="Java review note">
+<meta name="twitter:description" content="Abstraction: 
+
+Big programs are built out of small methods.
+Methods can be individually developed,tested and reused.
+User of method does not need to know how it works.
+
+
+Good programming style
+
+Rule">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/mw690/7505a2a9jw1f25wkmpanjj21kw11x1kx.jpg">
     
 
     
@@ -158,7 +178,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-Learning notes" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-ll" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -167,7 +187,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Difference between static method and instance method
+            Java review note
         </h1>
     
 
@@ -175,8 +195,8 @@
                     
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/03/22/Learning notes/">
-            <time datetime="2016-03-22T00:19:20.000Z" itemprop="datePublished">2016-03-22</time>
+        <a href="/2016/03/22/ll/">
+            <time datetime="2016-03-22T12:19:30.000Z" itemprop="datePublished">2016-03-22</time>
         </a>
     </div>
 
@@ -190,7 +210,7 @@
                     
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/java/">java</a>, <a class="tag-link" href="/tags/static-method/">static method</a>
+        <a class="tag-link" href="/tags/java/">java</a>
     </div>
 
                 </div>
@@ -199,16 +219,41 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>静态方法和实例方法的区别主要体现在两个方面：</p>
-<p>在外部调用静态方法时，可以使用”类名.方法名”的方式，也可以使用”对象名.方法名”的方式。而实例方法只有后面这种方式。<strong>也就是说，调用静态方法可以无需创建对象。</strong></p>
-<p>静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。</p>
-<p>举个例子：<br><strong> 1. 调用静态方法示例:</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//-----------hasStaticMethod.java-----------------</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">hasStaticMethod</span></span>&#123;</span><br><span class="line"><span class="comment">//定义一个静态方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">callMe</span><span class="params">()</span></span>&#123;</span><br><span class="line">　　System.out.println(<span class="string">"This is a static method."</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>  下面这个程序使用两种形式来调用静态方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//-----------invokeStaticMethod.java-----------------</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">invokeStaticMethod</span></span>&#123;</span><br><span class="line">　　<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">　　hasStaticMethod.callMe();  <span class="comment">//不创建对象，直接调用静态方法    </span></span><br><span class="line">　　hasStaticMethod oa = <span class="keyword">new</span> hasStaticMethod();   <span class="comment">//创建一个对象</span></span><br><span class="line">　　oa.callMe();      <span class="comment">//利用对象来调用静态方法</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>程序两次调用静态方法，都是允许的，程序的输出如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This is a <span class="keyword">static</span> method.This is a <span class="keyword">static</span> method.</span><br></pre></td></tr></table></figure></p>
-<p>允许不创建对象而调用静态方法，是Java为了减少程序员调用某些常用方法时的麻烦，而允许程序员按照传统的C语言中使用函数的方式来使用方法。典型的例子是前面某些程序中使用”Math.ramdon()”来获取随机数。<br>还有一个很典型的代表就是数组的处理工具Arrays.</p>
-<p><strong> 2. 静态方法访问成员变量示例: </strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//-----------accessMember.java-----------------</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">accessMember</span></span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> sa; <span class="comment">//定义一个静态成员变量</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> ia;  <span class="comment">//定义一个实例成员变量</span></span><br><span class="line"><span class="comment">//下面定义一个静态方法</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">statMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">　　<span class="keyword">int</span> i = <span class="number">0</span>;    <span class="comment">//正确，可以有自己的局部变量sa = 10;   </span></span><br><span class="line">　　<span class="comment">//正确，静态方法可以使用静态变量</span></span><br><span class="line">　　otherStat();  </span><br><span class="line">　　<span class="comment">//正确，可以调用静态方法</span></span><br><span class="line">　　ia = <span class="number">20</span>;   <span class="comment">//错误，不能使用实例变量</span></span><br><span class="line">　　insMethod();  <span class="comment">//错误，不能调用实例方法</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">otherStat</span><span class="params">()</span></span>&#123;&#125; </span><br><span class="line"><span class="comment">//下面定义一个实例方法 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">insMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">　　<span class="keyword">int</span> i = <span class="number">0</span>;    <span class="comment">//正确，可以有自己的局部变量</span></span><br><span class="line">　　sa = <span class="number">15</span>;    <span class="comment">//正确，可以使用静态变量</span></span><br><span class="line">　　ia = <span class="number">30</span>;    <span class="comment">//正确，可以使用实例变量</span></span><br><span class="line">　　statMethod();   <span class="comment">//正确，可以调用静态方法</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>本例其实可以概括成一句话：静态方法只能访问静态成员，实例方法可以访问静态和实例成员。</strong> 之所以不允许静态方法访问实例成员变量，是因为实例成员变量是属于某个对象的，而静态方法在执行时，并不一定存在对象。同样，因为实例方法可以访问实例成员变量，如果允许静态方法调用实例方法，将间接地允许它使用实例成员变量，所以它也不能调用实例方法。基于同样的道理，静态方法中也不能使用关键字this。</p>
-<p>main()方法是一个典型的静态方法，它同样遵循一般静态方法的规则，所以它可以由系统在创建对象之前就调用。</p>
+            <p><img src="http://ww3.sinaimg.cn/mw690/7505a2a9jw1f25wkmpanjj21kw11x1kx.jpg" alt=""></p>
+<hr>
+<p><em>Abstraction:</em> </p>
+<ul>
+<li>Big programs are built out of small methods.</li>
+<li>Methods can be individually developed,tested and reused.</li>
+<li>User of method does not need to know how it works.</li>
+</ul>
+<hr>
+<p><em>Good programming style</em></p>
+<ul>
+<li><p>Rule 1: Use good(meaningful) names</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String a1;</span><br><span class="line"><span class="keyword">int</span> a2;</span><br><span class="line"><span class="keyword">double</span> b;         <span class="comment">// BAD!!</span></span><br><span class="line">String firstName; <span class="comment">// GOOD String lastName; // GOOD int temperature; // GOOD</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Rule 2: Use indentation</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] arguments)</span> </span>&#123; <span class="keyword">int</span> x = <span class="number">5</span>;</span><br><span class="line">x = x * x;</span><br><span class="line"><span class="keyword">if</span> (x &gt; <span class="number">20</span>) &#123;</span><br><span class="line">System.out.println(x + “ is greater than <span class="number">20</span>.”); &#125;</span><br><span class="line"><span class="keyword">double</span> y = <span class="number">3.4</span>; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong><em>Ctrl-shift-F to auto-format the file</em></strong></p>
+<ul>
+<li><p>Rule 3:Use whitespaces<br>Put whitespaces in complex expressions:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// BAD!!</span></span><br><span class="line"><span class="keyword">double</span> cel=fahr*<span class="number">42.0</span>/(<span class="number">13.0</span>-<span class="number">7.0</span>);</span><br><span class="line"><span class="comment">// GOOD</span></span><br><span class="line"><span class="keyword">double</span> cel = fahr * <span class="number">42.0</span> / (<span class="number">13.0</span> - <span class="number">7.0</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Rule 4:Do not duplicate tests</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (basePay &lt; <span class="number">8.0</span>) &#123; ...</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (hours &gt; <span class="number">60</span>) &#123; ...</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (basePay &gt;= <span class="number">8.0</span> &amp;&amp; hours &lt;= <span class="number">60</span>)&#123; ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="—————–BAD—————–"><a href="#—————–BAD—————–" class="headerlink" title="—————–BAD—————–"></a>—————–BAD—————–</h2><p><em>Something about loop</em></p>
+<ul>
+<li><p><strong>break:</strong> terminates a for a while loop<br><img src="http://ww3.sinaimg.cn/large/7505a2a9jw1f25w7t6j2zj214q0n040r.jpg" alt="break"></p>
+</li>
+<li><p><strong>continue:</strong> skips the current iteration of a loop and preceeds directly to the next iteration.<br><img src="http://ww4.sinaimg.cn/large/7505a2a9jw1f25w9x74s0j21440gk40i.jpg" alt="continue"></p>
+</li>
+</ul>
+<hr>
 
         
         </div>
@@ -219,7 +264,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/03/22/Learning notes/" data-id="cim3e3lxr0000ms0g0dyxa3j0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/03/22/ll/" data-id="cim3e3ly00004ms0gy5c8ogpe" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -287,7 +332,7 @@
 
             
     
-        <a href="http://yoursite.com/2016/03/22/Learning notes/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/03/22/Learning notes/">Comments</a>
+        <a href="http://yoursite.com/2016/03/22/ll/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/03/22/ll/">Comments</a>
     
 
         </footer>
@@ -296,19 +341,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/03/22/ll/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    Java review note
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/03/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/03/22/Learning notes/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Hello World</div>
+            <div class="article-nav-title">Difference between static method and instance method</div>
         </a>
     
 </nav>
@@ -407,7 +443,7 @@
     var disqus_shortname = 'hexo-theme-icarus';
     
     
-    var disqus_url = 'http://yoursite.com/2016/03/22/Learning notes/';
+    var disqus_url = 'http://yoursite.com/2016/03/22/ll/';
     
     (function() {
     var dsq = document.createElement('script');
