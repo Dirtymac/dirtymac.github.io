@@ -7,23 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="静态方法和实例方法的区别主要体现在两个方面：
 在外部调用静态方法时，可以使用”类名.方法名”的方式，也可以使用”对象名.方法名”的方式。而实例方法只有后面这种方式。也就是说，调用静态方法可以无需创建对象。
-静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。
-举个例子： 1. 调用静态方法示例:1234567 //--">
+静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Difference between static method and instance method">
 <meta property="og:url" content="http://yoursite.com/2016/03/22/Learning notes/index.html">
 <meta property="og:site_name" content="Maybe">
 <meta property="og:description" content="静态方法和实例方法的区别主要体现在两个方面：
 在外部调用静态方法时，可以使用”类名.方法名”的方式，也可以使用”对象名.方法名”的方式。而实例方法只有后面这种方式。也就是说，调用静态方法可以无需创建对象。
-静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。
-举个例子： 1. 调用静态方法示例:1234567 //--">
-<meta property="og:updated_time" content="2016-03-22T09:08:27.000Z">
+静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。">
+<meta property="og:updated_time" content="2016-03-23T07:05:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Difference between static method and instance method">
 <meta name="twitter:description" content="静态方法和实例方法的区别主要体现在两个方面：
 在外部调用静态方法时，可以使用”类名.方法名”的方式，也可以使用”对象名.方法名”的方式。而实例方法只有后面这种方式。也就是说，调用静态方法可以无需创建对象。
-静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。
-举个例子： 1. 调用静态方法示例:1234567 //--">
+静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。">
     
 
     
@@ -202,6 +199,7 @@
             <p>静态方法和实例方法的区别主要体现在两个方面：</p>
 <p>在外部调用静态方法时，可以使用”类名.方法名”的方式，也可以使用”对象名.方法名”的方式。而实例方法只有后面这种方式。<strong>也就是说，调用静态方法可以无需创建对象。</strong></p>
 <p>静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。</p>
+<a id="more"></a>
 <p>举个例子：<br><strong> 1. 调用静态方法示例:</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//-----------hasStaticMethod.java-----------------</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">hasStaticMethod</span></span>&#123;</span><br><span class="line"><span class="comment">//定义一个静态方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">callMe</span><span class="params">()</span></span>&#123;</span><br><span class="line">　　System.out.println(<span class="string">"This is a static method."</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>  下面这个程序使用两种形式来调用静态方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//-----------invokeStaticMethod.java-----------------</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">invokeStaticMethod</span></span>&#123;</span><br><span class="line">　　<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">　　hasStaticMethod.callMe();  <span class="comment">//不创建对象，直接调用静态方法    </span></span><br><span class="line">　　hasStaticMethod oa = <span class="keyword">new</span> hasStaticMethod();   <span class="comment">//创建一个对象</span></span><br><span class="line">　　oa.callMe();      <span class="comment">//利用对象来调用静态方法</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>程序两次调用静态方法，都是允许的，程序的输出如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This is a <span class="keyword">static</span> method.This is a <span class="keyword">static</span> method.</span><br></pre></td></tr></table></figure></p>
